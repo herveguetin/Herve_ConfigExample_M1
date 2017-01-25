@@ -1,0 +1,6 @@
+app/code/community/Herve/ConfigExampleCoffeeLines app/code/community/Herve/ConfigExampleCoffeeLines
+app/code/community/Herve/ConfigExampleMain app/code/community/Herve/ConfigExampleMain
+app/design/frontend/base/default/layout/herve_configexamplemain.xml app/design/frontend/base/default/layout/herve_configexamplemain.xml
+app/design/frontend/base/default/template/herve_configexamplemain app/design/frontend/base/default/template/herve_configexamplemain
+app/etc/modules/Herve_ConfigExampleCoffeeLines.xml app/etc/modules/Herve_ConfigExampleCoffeeLines.xml
+app/etc/modules/Herve_ConfigExampleMain.xml app/etc/modules/Herve_ConfigExampleMain.xml

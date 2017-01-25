@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+/**
+ * This file is part of Herve_ConfigExampleMain for Magento.
+ *
+ * @license http://opensource.org/licenses/osl-3.0.php  Open Software License (OSL 3.0)
+ * @author Herve Guetin <herve.guetin@agence-soon.fr> <@herveguetin>
+ * @category Herve
+ * @package Herve_ConfigExampleMain
+ */
+-->
+<config>
+    <modules>
+        <Herve_ConfigExampleMain>
+            <version>1.0.0</version>
+        </Herve_ConfigExampleMain>
+    </modules>
+    <!-- Our custom config node -->
+    <herve_configexample>
+        <simple_config>
+            <value>Some value</value>
+        </simple_config>
+    </herve_configexample>
+    <global>
+        <blocks>
+            <herve_configexamplemain>
+                <class>Herve_ConfigExampleMain_Block</class>
+            </herve_configexamplemain>
+        </blocks>
+        <models>
+            <herve_configexamplemain>
+                <class>Herve_ConfigExampleMain_Model</class>
+            </herve_configexamplemain>
+        </models>
+        <helpers>
+            <herve_configexamplemain>
+                <class>Herve_ConfigExampleMain_Helper</class>
+            </herve_configexamplemain>
+        </helpers>
+    </global>
+    <frontend>
+        <routers>
+            <herve_configexamplemain>
+                <use>standard</use>
+                <args>
+                    <module>Herve_ConfigExampleMain</module>
+                    <frontName>herveconfigexample</frontName>
+                </args>
+            </herve_configexamplemain>
+        </routers>
+        <layout>
+            <updates>
+                <herve_configexamplemain module="Herve_ConfigExampleMain">
+                    <file>herve_configexamplemain.xml</file>
+                </herve_configexamplemain>
+            </updates>
+        </layout>
+    </frontend>
+</config>
