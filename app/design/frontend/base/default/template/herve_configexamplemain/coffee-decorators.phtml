@@ -1,0 +1,27 @@
+<?php
+/**
+ * This file is part of Herve_ConfigExampleMain for Magento.
+ *
+ * @license http://opensource.org/licenses/osl-3.0.php  Open Software License (OSL 3.0)
+ * @author Herve Guetin <herve.guetin@agence-soon.fr> <@herveguetin>
+ * @category Herve
+ * @package Herve_ConfigExampleMain
+ */
+/** @var Herve_ConfigExampleMain_Block_CoffeeDecorators $this */
+?>
+<?php
+    $_priceLineCollection = $this->getCoffeePriceLineCollection();
+?>
+<?php if($_priceLineCollection->count()): ?>
+    <div>
+        <h4>Using decorators to create price for your morning coffee</h4>
+        <ul id="herve_configexample_coffee_decorators">
+            <?php foreach ($_priceLineCollection as $_priceLine): ?>
+                <?php /** @var  Herve_ConfigExampleMain_Model_Coffee_CoffeeLineInterface $_priceLine */?>
+                <li><?php echo $this->__('%s: %s', $_priceLine->getLabel(), $_priceLine->getFormattedPrice()) ?></li>
+            <?php endforeach; ?>
+            <li><strong><?php echo $this->__('Total: %s', $this->getFormattedFinalPrice()) ?></strong></li>
+        </ul>
+    </div>
+    <script>decorateList('herve_configexample_coffee_decorators');</script>
+<?php endif ?>
